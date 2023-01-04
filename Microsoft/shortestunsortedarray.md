@@ -17,7 +17,7 @@ nums = [2,6,4,8,10,9,15]
 Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.
 ```
 
-### Solution 1 (sorting) - nlogn time complexity
+### Solution 1 (sorting) - O(nlogn) time complexity
 
 ```cpp
 class Solution {
@@ -45,4 +45,4 @@ public:
 ```
 
 
-### Solution 2  - n time complexity
+### Solution 2  - O(n) time complexity
