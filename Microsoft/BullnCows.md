@@ -2,7 +2,9 @@
 
 link - https://leetcode.com/problems/bulls-and-cows/description/
 
-Problem Statement - You are playing the Bulls and Cows game with your friend.
+### Problem Statement - 
+
+You are playing the Bulls and Cows game with your friend.
 
 You write down a secret number and ask your friend to guess what the number is. When your friend makes a guess, you provide a hint with the following info:
 
