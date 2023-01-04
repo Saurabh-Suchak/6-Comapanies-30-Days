@@ -46,7 +46,7 @@ public:
         dp [0] = f0;
         maxi = dp [0];
         for (int i = 1; i < nums.size(); i++) {
-            dp [i] = dp [i-1] + sum - nums.size() * nums [nums.size() - i];
+            dp [i] = dp [i-1] + sum - nums.size() * nums [nums.size() - i];// generlised formula, can be obtained by calculating f(0) and f(1), and f(1),f(2)
             
             maxi = max(maxi,dp[i]);
         }
