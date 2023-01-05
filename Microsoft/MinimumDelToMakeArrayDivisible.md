@@ -24,7 +24,7 @@ The smallest element in [3,4,3] is 3, which divides all the elements of numsDivi
 It can be shown that 2 is the minimum number of deletions needed.
 ```
 
-### Solution
+### Solution-1 (brute force)  accepted
 
 ```cpp
 class Solution {
@@ -37,9 +37,10 @@ public:
             if(numsDivide[j]%nums[0]!=0){z=0;break;}
         }
         if(z==1)return 0;
-        
+// check for del other than 0
         for(int i=1;i<nums.size();i++){
             int flag=1;
+            // if same consecutive number then skip calculating
             if(nums[i]==nums[i-1]){continue;}
             for(int j=0;j<numsDivide.size();j++){
                 if(numsDivide[j]%nums[i]!=0){flag=0;break;}
@@ -48,5 +49,25 @@ public:
         }return -1;
     }
 };
+
+```
+
+### Solution-2 (using gcd)
+
+```cpp
+
+class Solution {
+public:
+int minOperations(vector<int>& nums, vector<int>& numsDivide) {
+        int hcf = numsDivide[0];
+        for (auto& a: numsDivide)
+            hcf = gcd(g, a);
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < nums.size() && nums[i] <= hcf; i++)
+            if (hcf % nums[i] == 0)
+                return i;
+        return -1;
+    }
+}
 
 ```
