@@ -20,6 +20,8 @@ points = [[1,1],[2,2],[3,3]]
 
 ```cpp
 
+// take a single point and find slope to all from it, store in map and find max
+
 class Solution {
 public:
     int maxPoints(vector<vector<int>> &points) {
